@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 610px;
+            width: 100%;
+            background: linear-gradient(to right, #232828, #343b3c, #464e50, #5a6266, #6f777d, #6f777d, #6f777d, #6f777d, #5a6266, #464e50, #343b3c, #232828);
+        }
+        img
+        {
+            width: 300px;
+            height: 550px;
+        }
+        .imgbox
+        {
+            position: absolute;
+            left: 700px;
+        }
+        .name
+        {
+            position: absolute;
+            left: 30px;
+            top:10px;
+            font-family:'Vast Shadow', cursive;
+            font-size: 40px;
+            color: #E3E3E3;
+            letter-spacing: 1px;
+        }
+        ul
+        {
+            position: absolute;
+            top:30px;
+            left: 150px;
+            display: flex;
+        }
+
+
+        ul li
+        {
+            position: relative;
+            padding: 5px 40px;
+            list-style: none;
+            letter-spacing: 2px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #E3E3E3;
+        }
+
+
+        ul li:before
+        {
+            content: '';
+            position: absolute;
+            top:-5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #EB477E;
+            box-shadow: 0 0 10px #EB477E,0 0 40px #EB477E,0 0  80px #EB477E;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: right;
+
+            transition: transform 0.5s;
+        }
+
+        ul li:hover:before
+        {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+
+
+        .heading
+        {
+            position: absolute;
+            top:150px;
+            left: 170px;
+
+            font-weight: 900;
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 5em;
+            text-transform: uppercase;
+
+            color: #E3E3E3;
+        }
+        .sub_heading
+        {
+            position: absolute;
+            top:250px;
+            left: 180px;
+            font-family: Verdana;
+            font-size: 30px;
+            font-weight: 450;
+            color: #E3E3E3;
+
+            animation-name: animate2;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-duration: 2s;
+        }
+        .sub_heading:first-letter
+        {
+            font-size: 45px;
+        }
+        @keyframes animate2 {
+            0%
+            {
+            visibility: hidden;
+            opacity: 0;
+            top:230px;
+            }
+
+            30%
+            {
+            visibility: visible;
+            opacity: 0.1;
+            top:240px;
+            }
+
+            70%
+            {
+            visibility: visible;
+            opacity: 0.6;
+            top:250px;
+            }
+        }
+        .partition
+        {
+            position: absolute;
+            background: #EB477E;
+            width: 150px;
+            height: 2px;
+            top:250px;
+            left: 180px;
+            box-shadow: 0 0 10px #EB477E,0 0 40px #EB477E,0 0  80px #EB477E;
+
+
+            transform-origin: left;
+
+            animation-name: animate1;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-duration: 1s;
+        }
+        @keyframes animate1 {
+            0%
+            {
+                visibility: hidden;
+                opacity: 0;
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+
+            30%
+            {
+                visibility: visible;
+                opacity: 0.3;
+                transform: scaleX(0.3);
+                transform-origin: left;
+            }
+
+            60%
+            {
+                visibility: visible;
+                opacity: 0.6;
+                transform: scaleX(0.6);
+                transform-origin: left;
+            }
+        }
+
+        .content
+        {
+            position: absolute;
+            top:320px;
+            left: 180px;
+
+            font-family: Verdana;
+            font-size: 16px;
+            font-weight:500;
+            color: #E3E3E3;
+
+            line-height: 30px;
+            opacity: 0.7;
+        }
+
+        .link
+        {
+            position: absolute;
+            top:550px;
+            left: 180px;
+        }
+        .link a
+        {
+            font-family: sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #E3E3E3;
+            box-sizing: border-box;
+            padding: 15px 20px;
+            font-size: 14px;
+            border-radius: 30px;
+            background:#EB477E;
+            box-shadow: 0 0 10px #EB477E,0 0 20px #EB477E,0 0  40px #EB477E;
+
+            transition: 0.5s;
+        }
+        .link a:hover
+        {
+            background: #E3E3E3;
+            color: #1D1E2C;
+            box-shadow: 0 0 40px rgba(255,255,255,0.6);
+        }
+
+        .heading2
+        {
+            position: absolute;
+            left: 990px;
+            top:70px;
+            letter-spacing: 1px;
+
+            font-size:18px ;
+            font-family: 'Didact Gothic', sans-serif;
+            text-transform: uppercase;
+            color: #E3E3E3;
+
+            animation-name: animate3;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-duration: 2s;
+        }
+        .heading2:first-letter
+        {
+            font-size: 25px;
+            font-weight: 500
+        }
+        @keyframes animate3 {
+            0%
+            {
+                visibility: hidden;
+                opacity: 0;
+                top:90px;
+            }
+
+            40%
+            {
+                visibility: visible;
+                opacity: 0.3;
+                top:80px;
+            }
+
+            80%
+            {
+                visibility: visible;
+                opacity: 0.6;
+                top:70px;
+            }
+        }
+        .partition2
+        {
+            position: absolute;
+            height: 2px;
+            width: 200px;
+            background: #EB477E;
+            left: 990px;
+            top:110px;
+            box-shadow: 0 0 10px #EB477E,0 0 40px #EB477E,0 0  80px #EB477E;
+
+            transform-origin: right;
+            animation-name: animate4;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-duration: 1s;
+        }
+        @keyframes animate4 {
+            0%
+            {
+                visibility: hidden;
+                opacity: 0;
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+
+            30%
+            {
+                visibility: visible;
+                opacity: 0.3;
+                transform: scaleX(0.3);
+                transform-origin: right;
+            }
+
+            60%
+            {
+                visibility: visible;
+                opacity: 0.6;
+                transform: scaleX(0.6);
+                transform-origin: right;
+            }
+        }
+
+        .heading3
+        {
+            position: absolute;
+            left: 990px;
+            top:120px;
+
+            font-family: 'Didact Gothic', sans-serif;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 45px;
+            letter-spacing: 4px;
+            color: #E3E3E3;
+            line-height: 40px;
+        }
+
+        .scroll_down
+        {
+            position: absolute;
+            top:420px;
+
+
+            font-family: Verdana;
+            letter-spacing: 1px;
+
+            transform: rotate(-90deg);
+            color: #E3E3E3;
+        }
+
+        .arrow
+        {
+            position: absolute;
+            transform: rotate(90deg);
+            top: 520px;
+            left: 40px;
+            color: #E3E3E3;
+        }
+        .shadow
+        {
+            position: absolute;
+            width: 350px;
+            height: 3px;
+            background: #EB477E;
+            left: 860px;
+            top:516px;
+            opacity: 0.6;
+            box-shadow: 0 0 10px #EB477E,0 0 40px #EB477E,0 0  80px #EB477E;
+            transform:perspective(800px) skew(30deg);
+            transform-origin: left;
+
+            animation-name: animate1;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-duration: 4s;
+        }
+
+        .title
+        {
+            position: absolute;
+            top:-400px;
+            left: 270px;
+            font-family: 'Archivo Narrow', sans-serif;
+
+            font-size: 50em;
+            opacity: 0.2;
+            color: #404341;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+<div class="imgbox">
+    <img src="superstar_shoe.png">
+</div>
+
+<div class="name">
+    me.
+</div>
+
+<div class="list">
+    <ul>
+        <li>New</li>
+        <li>Women</li>
+        <li>Men</li>
+        <li>Sport</li>
+    </ul>
+</div>
+
+<div class="heading">
+    superstar
+</div>
+
+<div class="partition"></div>
+<div class="partition2"></div>
+
+<div class="sub_heading">
+    originals
+</div>
+
+<div class="content">
+    for over 50 years the<br>Adidas Superstar sneaker<br>
+    has been the go-to of sport<br>
+    and street legends,<br>
+    connecting creators across<br>cultures.
+</div>
+<div class="link">
+    <a href="#">add to bag</a>
+</div>
+
+<div class="heading2">
+    quality materials
+</div>
+
+<div class="heading3">
+    iconic<br>shoes
+</div>
+
+<div class="scroll_down">
+    scroll down
+</div>
+<div class="arrow">
+    <i class="fas fa-long-arrow-alt-right fa-2x"></i>
+</div>
+
+<div class="shadow"></div>
+
+<div class="title">
+    20
+</div>
+</body>
+</html>
